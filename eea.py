@@ -6,12 +6,6 @@ print("Enter 2 numbers to find gcd(a, b)")
 valA = int(input("a = "))
 valB = int(input("b = "))
 
-# put greatest value in b if necessary
-if valA >= valB:
-    temp = valB
-    valB = valA
-    valA = temp
-
 # save initial values 
 startA = valA
 startB = valB
@@ -26,7 +20,7 @@ while valA != 0:
     valA = newA
 
 # print gcd
-print("\ngcd(", startA, ",", startB, ") =", valB, "\n")
+print("\ngcd(", startB, ",", startA, ") =", valB, "\n")
 
 # construct Bezout Identity
 x = 1
