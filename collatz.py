@@ -6,12 +6,13 @@
 
 max_iter = 10000
 
+# return (success, iteration)
 def collatz(seed):
     i = 1
     xlast = seed
     while i < max_iter:
         xi = (xlast // 2) if (xlast % 2 == 0) else (3 * xlast + 1)
-        # print("x[" + str(i) + "] = " + str(xi))
+        print("x[" + str(i) + "] = " + str(xi))
         if xi == 1:
             return 1, i
         xlast = xi

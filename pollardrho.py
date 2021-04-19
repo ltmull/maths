@@ -10,7 +10,7 @@ x_0 = int(input("x0 = "))
 print("---------------------------------------")
 
 # set desired print setting and iteration limit
-enable_print = True
+enable_print = False
 max_iter = 10000
 
 # initialization
