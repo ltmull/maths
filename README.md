@@ -1,2 +1,2 @@
 # maths
-Some basic python practice implementing neat numerical algorithms
+Some basic python practice implementing neat numerical algorithms, etc.
