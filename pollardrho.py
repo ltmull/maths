@@ -25,7 +25,8 @@ if enable_print:
 while (g < 2 and i < max_iter):
     # x[i] = (x[i-1]^2 + 1) mod N
     i += 1
-    xi = int( fmod(((xlist[i-1])^2)+1, N))
+    xi = int(((xlist[i-1])**2)+1)
+    xi = xi % N
     xlist.append( xi )
     if enable_print:
         print("i =", i, ": x[", i, "] =", xlist[i])
