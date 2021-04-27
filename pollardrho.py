@@ -1,7 +1,7 @@
 # Pollard Rho factoring algorithm
 # Find a factor of a given N 
 
-from math import fmod, gcd
+from math import gcd
 
 # get N (to factor) and seed
 print("Enter a number N to factor and a seed x0")
@@ -11,7 +11,7 @@ print("---------------------------------------")
 
 # set desired print setting and iteration limit
 enable_print = False
-max_iter = 10000
+max_iter = 1000
 
 # initialization
 g = 1
@@ -34,6 +34,9 @@ while (g < 2 and i < max_iter):
     # for even i, calculate gcd(N, x[i]-x[i/2])
     if i % 2 == 0:
         g = gcd( N, ( xlist[i] - xlist[i//2] ) )
+        # ignore when gcd returns N
+        if (g == N):
+            g = 1
         if enable_print:
             print("\tg =", g)
 
@@ -43,4 +46,4 @@ if i < max_iter:
     print(N, "=", g, "*", N/g)
     
 else:
-    print("No factor found, probably prime")
+    print("No factor found in " + str(max_iter) + " iterations")
