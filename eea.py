@@ -20,7 +20,7 @@ while valA != 0:
     valA = newA
 
 # print gcd
-print("\ngcd(", startB, ",", startA, ") =", valB, "\n")
+print(f"\ngcd({startB}, {startA}) = {valB}\n")
 
 # construct Bezout Identity
 x = 1
@@ -32,4 +32,5 @@ while len(floor_list) > 1:
 
 # print Bezout Identity
 print("Bezout Identity:")
-print(valB, "=", startB, "(", x, ") +", startA, "(", y, ")")
+#print(valB, "=", startB, "(", x, ") +", startA, "(", y, ")")
+print(f"{valB} = {startB} ( {x} ) + {startA} ( {y} )")
