@@ -1,7 +1,9 @@
+#!/bin/python3
 # Pollard Rho factoring algorithm
 # Find a factor of a given N 
 
 from math import gcd
+from time import time_ns
 
 # get N (to factor) and seed
 print("Enter a number N to factor and a seed x0")
@@ -20,6 +22,9 @@ xlist = []
 xlist.append(x_0)
 if enable_print:
     print("i =", i, ": x[", i, "] =", xlist[i])
+
+# start timer
+start_time = time_ns()
 
 # loop while no factor found and below iteration limit
 while (g < 2 and i < max_iter):
@@ -47,3 +52,8 @@ if i < max_iter:
     
 else:
     print("No factor found in " + str(max_iter) + " iterations")
+
+# end timer
+end_time = time_ns()
+time_passed = end_time - start_time
+print(f"Time to solve: {time_passed / 1000000000} seconds")
